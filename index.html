@@ -1,83 +1,97 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'><title>OSLU</title><style>body{font-family:Arial;max-width:1000px;margin:auto;padding:20px;background:#f4f4f4}.section{background:#0b4f8a;color:#fff;padding:8px;margin-top:16px}.row{display:flex;gap:10px;padding:8px;background:#fff;flex-wrap:wrap}label{min-width:320px;font-weight:bold}</style></head><body><h1>OSLU Building Rounds</h1><form>
-<div class='row'><label>Day</label><input type='radio' name='Day'>Mon <input type='radio' name='Day'>Tue <input type='radio' name='Day'>Wed <input type='radio' name='Day'>Thu <input type='radio' name='Day'>Fri <input type='radio' name='Day'>Sat <input type='radio' name='Day'>Sun</div>
-<div class='row'><label>Date</label><input type='date'></div>
-<div class='row'><label>Time</label><input type='time'></div>
-<div class='row'><label>OA Temp (°F)</label><input type='number'></div>
-<div class='row'><label>Technician</label><input type='text'></div>
-<div class='row'><label>Tower</label><input type='radio' name='Tower'>Tower 1 <input type='radio' name='Tower'>Tower 2</div>
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>OSLU Building Rounds</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:1000px;margin:auto;padding:20px}
+.section{background:#0b4f8a;color:#fff;padding:8px;margin-top:16px;font-weight:bold}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:6px 0}
+label{min-width:360px;font-weight:bold}
+</style></head><body><h1>OSLU Building Rounds</h1>
+<form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
+<div class='row'><label>Day</label>
+<input type='radio' name='Day' value='Mon'>Mon
+<input type='radio' name='Day' value='Tue'>Tue
+<input type='radio' name='Day' value='Wed'>Wed
+<input type='radio' name='Day' value='Thu'>Thu
+<input type='radio' name='Day' value='Fri'>Fri
+<input type='radio' name='Day' value='Sat'>Sat
+<input type='radio' name='Day' value='Sun'>Sun</div>
+<div class='row'><label>Date</label><input type='date' name='Date'></div>
+<div class='row'><label>Time</label><input type='time' name='Time'></div>
+<div class='row'><label>OA Temp (°F)</label><input type='number' step='0.1' name='OA Temp'></div>
+<div class='row'><label>Technician</label><input type='text' name='Technician'></div>
+<div class='row'><label>Tower</label><input type='radio' name='Tower' value='1'>Tower 1 <input type='radio' name='Tower' value='2'>Tower 2</div>
 <div class='section'>Elevator and Stairway Pressurization Fans (43rd floor)</div>
-<div class='row'><label>EPF in auto? Yes / No</label><input type='text'></div>
-<div class='row'><label>SPF in auto? Yes / No</label><input type='text'></div>
+<div class='row'><label>EPF in auto?</label><input type='radio' name='EPF in auto?' value='Yes'>Yes <input type='radio' name='EPF in auto?' value='No'>No</div>
+<div class='row'><label>SPF in auto?</label><input type='radio' name='SPF in auto?' value='Yes'>Yes <input type='radio' name='SPF in auto?' value='No'>No</div>
 <div class='section'>Chute vents (Roof)</div>
-<div class='row'><label>Recycling vent clear? Yes / No</label><input type='text'></div>
-<div class='row'><label>Trash vent clear? Yes / No</label><input type='text'></div>
-<div class='row'><label>Chute room exhuast? Yes / No</label><input type='text'></div>
+<div class='row'><label>Recycling vent clear?</label><input type='radio' name='Recycling vent clear?' value='Yes'>Yes <input type='radio' name='Recycling vent clear?' value='No'>No</div>
+<div class='row'><label>Trash vent clear?</label><input type='radio' name='Trash vent clear?' value='Yes'>Yes <input type='radio' name='Trash vent clear?' value='No'>No</div>
+<div class='row'><label>Chute room exhuast?</label><input type='radio' name='Chute room exhuast?' value='Yes'>Yes <input type='radio' name='Chute room exhuast?' value='No'>No</div>
 <div class='section'>Elevator Room ACU (43rd floor)</div>
-<div class='row'><label>ACU-D status On / Off</label><input type='text'></div>
-<div class='row'><label>ACU-D temp. Deg. F</label><input type='text'></div>
-<div class='row'><label>ACU-E status On / Off</label><input type='text'></div>
-<div class='row'><label>ACU-E temp. Deg. F</label><input type='text'></div>
-<div class='row'><label>ACU-F status On / Off</label><input type='text'></div>
-<div class='row'><label>ACU-F temp. Deg. F</label><input type='text'></div>
-<div class='row'><label>ACU-G status On / Off</label><input type='text'></div>
-<div class='row'><label>ACU-G temp. Deg. F</label><input type='text'></div>
+<div class='row'><label>ACU-D status On / Off</label><input type='text' name='ACU-D status On / Off'></div>
+<div class='row'><label>ACU-D temp. Deg. F</label><input type='text' name='ACU-D temp. Deg. F'></div>
+<div class='row'><label>ACU-E status On / Off</label><input type='text' name='ACU-E status On / Off'></div>
+<div class='row'><label>ACU-E temp. Deg. F</label><input type='text' name='ACU-E temp. Deg. F'></div>
+<div class='row'><label>ACU-F status On / Off</label><input type='text' name='ACU-F status On / Off'></div>
+<div class='row'><label>ACU-F temp. Deg. F</label><input type='text' name='ACU-F temp. Deg. F'></div>
+<div class='row'><label>ACU-G status On / Off</label><input type='text' name='ACU-G status On / Off'></div>
+<div class='row'><label>ACU-G temp. Deg. F</label><input type='text' name='ACU-G temp. Deg. F'></div>
 <div class='section'>Dry Sprinkler System (42nd floor)</div>
-<div class='row'><label>Air Side Pressure psi #</label><input type='text'></div>
-<div class='row'><label>Water Side Pressure psi #</label><input type='text'></div>
+<div class='row'><label>Air Side Pressure psi #</label><input type='text' name='Air Side Pressure psi #'></div>
+<div class='row'><label>Water Side Pressure psi #</label><input type='text' name='Water Side Pressure psi #'></div>
 <div class='section'>Domestic Hot Water System (42nd floor)</div>
-<div class='row'><label>T1 DHW RH HX Deg. F</label><input type='text'></div>
-<div class='row'><label>Recirculating water pump On / Off</label><input type='text'></div>
-<div class='row'><label>Expansion tank 1A Bladder normal? Yes / No</label><input type='text'></div>
-<div class='row'><label>Expansion tank 1B Bladder normal? Yes / No</label><input type='text'></div>
-<div class='row'><label>Expansion tank 1A PSI psi #</label><input type='text'></div>
-<div class='row'><label>Expansion tank 1B PSI psi #</label><input type='text'></div>
+<div class='row'><label>T1 DHW RH HX Deg. F</label><input type='text' name='T1 DHW RH HX Deg. F'></div>
+<div class='row'><label>Recirculating water pump On / Off</label><input type='text' name='Recirculating water pump On / Off'></div>
+<div class='row'><label>Expansion tank 1A Bladder normal?</label><input type='radio' name='Expansion tank 1A Bladder normal?' value='Yes'>Yes <input type='radio' name='Expansion tank 1A Bladder normal?' value='No'>No</div>
+<div class='row'><label>Expansion tank 1B Bladder normal?</label><input type='radio' name='Expansion tank 1B Bladder normal?' value='Yes'>Yes <input type='radio' name='Expansion tank 1B Bladder normal?' value='No'>No</div>
+<div class='row'><label>Expansion tank 1A PSI psi #</label><input type='text' name='Expansion tank 1A PSI psi #'></div>
+<div class='row'><label>Expansion tank 1B PSI psi #</label><input type='text' name='Expansion tank 1B PSI psi #'></div>
 <div class='section'>T1-Mech-AHU-1 (42nd floor)</div>
-<div class='row'><label>Status of Unit Heat/Cool</label><input type='text'></div>
-<div class='row'><label>Fan Speed %/Hz</label><input type='text'></div>
-<div class='row'><label>Supply Air Temp Deg. F</label><input type='text'></div>
-<div class='row'><label>Alarms present Yes / No</label><input type='text'></div>
+<div class='row'><label>Status of Unit Heat/Cool</label><input type='text' name='Status of Unit Heat/Cool'></div>
+<div class='row'><label>Fan Speed %/Hz</label><input type='text' name='Fan Speed %/Hz'></div>
+<div class='row'><label>Supply Air Temp Deg. F</label><input type='text' name='Supply Air Temp Deg. F'></div>
+<div class='row'><label>Alarms present</label><input type='radio' name='Alarms present' value='Yes'>Yes <input type='radio' name='Alarms present' value='No'>No</div>
 <div class='section'>31st Floor Pressure reducing valves</div>
-<div class='row'><label>DHW gauge psi IN psi #</label><input type='text'></div>
-<div class='row'><label>DHW gauge psi Out psi #</label><input type='text'></div>
-<div class='row'><label>DCW gauge psi IN psi #</label><input type='text'></div>
-<div class='row'><label>DCW gauge psi OUT psi #</label><input type='text'></div>
-<div class='row'><label>Circulation pump On / Off</label><input type='text'></div>
-<div class='row'><label>EMax heater operational? Yes / No</label><input type='text'></div>
-<div class='row'><label>Leak detectors operational? Yes / No</label><input type='text'></div>
+<div class='row'><label>DHW gauge psi IN psi #</label><input type='text' name='DHW gauge psi IN psi #'></div>
+<div class='row'><label>DHW gauge psi Out psi #</label><input type='text' name='DHW gauge psi Out psi #'></div>
+<div class='row'><label>DCW gauge psi IN psi #</label><input type='text' name='DCW gauge psi IN psi #'></div>
+<div class='row'><label>DCW gauge psi OUT psi #</label><input type='text' name='DCW gauge psi OUT psi #'></div>
+<div class='row'><label>Circulation pump On / Off</label><input type='text' name='Circulation pump On / Off'></div>
+<div class='row'><label>EMax heater operational?</label><input type='radio' name='EMax heater operational?' value='Yes'>Yes <input type='radio' name='EMax heater operational?' value='No'>No</div>
+<div class='row'><label>Leak detectors operational?</label><input type='radio' name='Leak detectors operational?' value='Yes'>Yes <input type='radio' name='Leak detectors operational?' value='No'>No</div>
 <div class='section'>25th Floor Pressure reducing valves</div>
-<div class='row'><label>DHW gauge psi IN psi #</label><input type='text'></div>
-<div class='row'><label>DHW gauge psi Out psi #</label><input type='text'></div>
-<div class='row'><label>DCW gauge psi IN psi #</label><input type='text'></div>
-<div class='row'><label>DCW gauge psi OUT psi #</label><input type='text'></div>
-<div class='row'><label>Circulation pump On / Off</label><input type='text'></div>
-<div class='row'><label>EMax heater operational? Yes / No</label><input type='text'></div>
-<div class='row'><label>Leak detectors operational? Yes / No</label><input type='text'></div>
+<div class='row'><label>DHW gauge psi IN psi #</label><input type='text' name='DHW gauge psi IN psi #'></div>
+<div class='row'><label>DHW gauge psi Out psi #</label><input type='text' name='DHW gauge psi Out psi #'></div>
+<div class='row'><label>DCW gauge psi IN psi #</label><input type='text' name='DCW gauge psi IN psi #'></div>
+<div class='row'><label>DCW gauge psi OUT psi #</label><input type='text' name='DCW gauge psi OUT psi #'></div>
+<div class='row'><label>Circulation pump On / Off</label><input type='text' name='Circulation pump On / Off'></div>
+<div class='row'><label>EMax heater operational?</label><input type='radio' name='EMax heater operational?' value='Yes'>Yes <input type='radio' name='EMax heater operational?' value='No'>No</div>
+<div class='row'><label>Leak detectors operational?</label><input type='radio' name='Leak detectors operational?' value='Yes'>Yes <input type='radio' name='Leak detectors operational?' value='No'>No</div>
 <div class='section'>17th Floor Pressure reducing valves</div>
-<div class='row'><label>DHW gauge psi IN psi #</label><input type='text'></div>
-<div class='row'><label>DHW gauge psi Out psi #</label><input type='text'></div>
-<div class='row'><label>DCW gauge psi IN psi #</label><input type='text'></div>
-<div class='row'><label>DCW gauge psi OUT psi #</label><input type='text'></div>
-<div class='row'><label>Circulation pump On / Off</label><input type='text'></div>
-<div class='row'><label>EMax heater operational? Yes / No</label><input type='text'></div>
-<div class='row'><label>Leak detectors operational? Yes / No</label><input type='text'></div>
+<div class='row'><label>DHW gauge psi IN psi #</label><input type='text' name='DHW gauge psi IN psi #'></div>
+<div class='row'><label>DHW gauge psi Out psi #</label><input type='text' name='DHW gauge psi Out psi #'></div>
+<div class='row'><label>DCW gauge psi IN psi #</label><input type='text' name='DCW gauge psi IN psi #'></div>
+<div class='row'><label>DCW gauge psi OUT psi #</label><input type='text' name='DCW gauge psi OUT psi #'></div>
+<div class='row'><label>Circulation pump On / Off</label><input type='text' name='Circulation pump On / Off'></div>
+<div class='row'><label>EMax heater operational?</label><input type='radio' name='EMax heater operational?' value='Yes'>Yes <input type='radio' name='EMax heater operational?' value='No'>No</div>
+<div class='row'><label>Leak detectors operational?</label><input type='radio' name='Leak detectors operational?' value='Yes'>Yes <input type='radio' name='Leak detectors operational?' value='No'>No</div>
 <div class='section'>9th Floor Pressure reducing valves</div>
-<div class='row'><label>DHW gauge psi IN psi #</label><input type='text'></div>
-<div class='row'><label>DHW gauge psi Out psi #</label><input type='text'></div>
-<div class='row'><label>DCW gauge psi IN psi #</label><input type='text'></div>
-<div class='row'><label>DCW gauge psi OUT psi #</label><input type='text'></div>
-<div class='row'><label>Circulation pump On / Off</label><input type='text'></div>
-<div class='row'><label>EMax heater operational? Yes / No</label><input type='text'></div>
-<div class='row'><label>Leak detectors operational? Yes / No</label><input type='text'></div>
+<div class='row'><label>DHW gauge psi IN psi #</label><input type='text' name='DHW gauge psi IN psi #'></div>
+<div class='row'><label>DHW gauge psi Out psi #</label><input type='text' name='DHW gauge psi Out psi #'></div>
+<div class='row'><label>DCW gauge psi IN psi #</label><input type='text' name='DCW gauge psi IN psi #'></div>
+<div class='row'><label>DCW gauge psi OUT psi #</label><input type='text' name='DCW gauge psi OUT psi #'></div>
+<div class='row'><label>Circulation pump On / Off</label><input type='text' name='Circulation pump On / Off'></div>
+<div class='row'><label>EMax heater operational?</label><input type='radio' name='EMax heater operational?' value='Yes'>Yes <input type='radio' name='EMax heater operational?' value='No'>No</div>
+<div class='row'><label>Leak detectors operational?</label><input type='radio' name='Leak detectors operational?' value='Yes'>Yes <input type='radio' name='Leak detectors operational?' value='No'>No</div>
 <div class='section'>12th floor fire Pump System</div>
-<div class='row'><label>XFER SW Normal Yes / No</label><input type='text'></div>
-<div class='row'><label>Verify Jockey Pump is in Auto Yes / No</label><input type='text'></div>
-<div class='row'><label>Note System Pressure psi #</label><input type='text'></div>
-<div class='section'>Tower 1 Fire Command Center</div>
-<div class='row'><label>System normal? Yes / No</label><input type='text'></div>
-<div class='row'><label>Bypasses active? Yes / No</label><input type='text'></div>
-<div class='row'><label>Jeron System normal? Yes / No</label><input type='text'></div>
-<div class='row'><label>Room free of clutter? Yes / No</label><input type='text'></div>
+<div class='row'><label>XFER SW Normal</label><input type='radio' name='XFER SW Normal' value='Yes'>Yes <input type='radio' name='XFER SW Normal' value='No'>No</div>
+<div class='row'><label>Verify Jockey Pump is in Auto</label><input type='radio' name='Verify Jockey Pump is in Auto' value='Yes'>Yes <input type='radio' name='Verify Jockey Pump is in Auto' value='No'>No</div>
+<div class='row'><label>Note System Pressure psi #</label><input type='text' name='Note System Pressure psi #'></div>
+<div class='section'>Fire Command Center</div>
+<div class='row'><label>System normal?</label><input type='radio' name='System normal?' value='Yes'>Yes <input type='radio' name='System normal?' value='No'>No</div>
+<div class='row'><label>Bypasses active?</label><input type='radio' name='Bypasses active?' value='Yes'>Yes <input type='radio' name='Bypasses active?' value='No'>No</div>
+<div class='row'><label>Jeron System normal?</label><input type='radio' name='Jeron System normal?' value='Yes'>Yes <input type='radio' name='Jeron System normal?' value='No'>No</div>
+<div class='row'><label>Room free of clutter?</label><input type='radio' name='Room free of clutter?' value='Yes'>Yes <input type='radio' name='Room free of clutter?' value='No'>No</div>
 <div class='section'>P7 Sewage Ejector / Sump Pump</div>
-<div class='row'><label>SP-4A/4B in auto? X</label><input type='text'></div>
-<div class='row'><label>Status (not in alarm) X</label><input type='text'></div>
-<button>Submit</button></form></body></html>
+<div class='row'><label>SP-4A/4B in auto? X</label><input type='text' name='SP-4A/4B in auto? X'></div>
+<div class='row'><label>Status (not in alarm) X</label><input type='text' name='Status (not in alarm) X'></div>
+<button type='submit'>Submit</button></form></body></html>
