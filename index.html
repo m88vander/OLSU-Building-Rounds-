@@ -1,97 +1,645 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'><title>OSLU Building Rounds</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSLU (T1) - Building Rounds</title>
 <style>
-body{font-family:Arial,sans-serif;max-width:1000px;margin:auto;padding:20px}
-.section{background:#0b4f8a;color:#fff;padding:8px;margin-top:16px;font-weight:bold}
-.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:6px 0}
-label{min-width:360px;font-weight:bold}
-</style></head><body><h1>OSLU Building Rounds</h1>
-<form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
-<div class='row'><label>Day</label>
-<input type='radio' name='Day' value='Mon'>Mon
-<input type='radio' name='Day' value='Tue'>Tue
-<input type='radio' name='Day' value='Wed'>Wed
-<input type='radio' name='Day' value='Thu'>Thu
-<input type='radio' name='Day' value='Fri'>Fri
-<input type='radio' name='Day' value='Sat'>Sat
-<input type='radio' name='Day' value='Sun'>Sun</div>
-<div class='row'><label>Date</label><input type='date' name='Date'></div>
-<div class='row'><label>Time</label><input type='time' name='Time'></div>
-<div class='row'><label>OA Temp (°F)</label><input type='number' step='0.1' name='OA Temp'></div>
-<div class='row'><label>Technician</label><input type='text' name='Technician'></div>
-<div class='row'><label>Tower</label><input type='radio' name='Tower' value='1'>Tower 1 <input type='radio' name='Tower' value='2'>Tower 2</div>
-<div class='section'>Elevator and Stairway Pressurization Fans (43rd floor)</div>
-<div class='row'><label>EPF in auto?</label><input type='checkbox' name='EPF in auto?'></div>
-<div class='row'><label>SPF in auto?</label><input type='checkbox' name='SPF in auto?'></div>
-<div class='section'>Chute vents (Roof)</div>
-<div class='row'><label>Recycling vent clear?</label><input type='checkbox' name='Recycling vent clear?'></div>
-<div class='row'><label>Trash vent clear?</label><input type='checkbox' name='Trash vent clear?'></div>
-<div class='row'><label>Chute room exhuast?</label><input type='checkbox' name='Chute room exhuast?'></div>
-<div class='section'>Elevator Room ACU (43rd floor)</div>
-<div class='row'><label>ACU-D status On / Off</label><input type='text' name='ACU-D status On / Off'></div>
-<div class='row'><label>ACU-D temp. Deg. F</label><input type='text' name='ACU-D temp. Deg. F'></div>
-<div class='row'><label>ACU-E status On / Off</label><input type='text' name='ACU-E status On / Off'></div>
-<div class='row'><label>ACU-E temp. Deg. F</label><input type='text' name='ACU-E temp. Deg. F'></div>
-<div class='row'><label>ACU-F status On / Off</label><input type='text' name='ACU-F status On / Off'></div>
-<div class='row'><label>ACU-F temp. Deg. F</label><input type='text' name='ACU-F temp. Deg. F'></div>
-<div class='row'><label>ACU-G status On / Off</label><input type='text' name='ACU-G status On / Off'></div>
-<div class='row'><label>ACU-G temp. Deg. F</label><input type='text' name='ACU-G temp. Deg. F'></div>
-<div class='section'>Dry Sprinkler System (42nd floor)</div>
-<div class='row'><label>Air Side Pressure psi #</label><input type='text' name='Air Side Pressure psi #'></div>
-<div class='row'><label>Water Side Pressure psi #</label><input type='text' name='Water Side Pressure psi #'></div>
-<div class='section'>Domestic Hot Water System (42nd floor)</div>
-<div class='row'><label>T1 DHW RH HX Deg. F</label><input type='text' name='T1 DHW RH HX Deg. F'></div>
-<div class='row'><label>Recirculating water pump On / Off</label><input type='text' name='Recirculating water pump On / Off'></div>
-<div class='row'><label>Expansion tank 1A Bladder normal?</label><input type='checkbox' name='Expansion tank 1A Bladder normal?'></div>
-<div class='row'><label>Expansion tank 1B Bladder normal?</label><input type='checkbox' name='Expansion tank 1B Bladder normal?'></div>
-<div class='row'><label>Expansion tank 1A PSI psi #</label><input type='text' name='Expansion tank 1A PSI psi #'></div>
-<div class='row'><label>Expansion tank 1B PSI psi #</label><input type='text' name='Expansion tank 1B PSI psi #'></div>
-<div class='section'>T1-Mech-AHU-1 (42nd floor)</div>
-<div class='row'><label>Status of Unit Heat/Cool</label><input type='text' name='Status of Unit Heat/Cool'></div>
-<div class='row'><label>Fan Speed %/Hz</label><input type='text' name='Fan Speed %/Hz'></div>
-<div class='row'><label>Supply Air Temp Deg. F</label><input type='text' name='Supply Air Temp Deg. F'></div>
-<div class='row'><label>Alarms present</label><input type='checkbox' name='Alarms present'></div>
-<div class='section'>31st Floor Pressure reducing valves</div>
-<div class='row'><label>DHW gauge psi IN psi #</label><input type='text' name='DHW gauge psi IN psi #'></div>
-<div class='row'><label>DHW gauge psi Out psi #</label><input type='text' name='DHW gauge psi Out psi #'></div>
-<div class='row'><label>DCW gauge psi IN psi #</label><input type='text' name='DCW gauge psi IN psi #'></div>
-<div class='row'><label>DCW gauge psi OUT psi #</label><input type='text' name='DCW gauge psi OUT psi #'></div>
-<div class='row'><label>Circulation pump On / Off</label><input type='text' name='Circulation pump On / Off'></div>
-<div class='row'><label>EMax heater operational?</label><input type='checkbox' name='EMax heater operational?'></div>
-<div class='row'><label>Leak detectors operational?</label><input type='checkbox' name='Leak detectors operational?'></div>
-<div class='section'>25th Floor Pressure reducing valves</div>
-<div class='row'><label>DHW gauge psi IN psi #</label><input type='text' name='DHW gauge psi IN psi #'></div>
-<div class='row'><label>DHW gauge psi Out psi #</label><input type='text' name='DHW gauge psi Out psi #'></div>
-<div class='row'><label>DCW gauge psi IN psi #</label><input type='text' name='DCW gauge psi IN psi #'></div>
-<div class='row'><label>DCW gauge psi OUT psi #</label><input type='text' name='DCW gauge psi OUT psi #'></div>
-<div class='row'><label>Circulation pump On / Off</label><input type='text' name='Circulation pump On / Off'></div>
-<div class='row'><label>EMax heater operational?</label><input type='checkbox' name='EMax heater operational?'></div>
-<div class='row'><label>Leak detectors operational?</label><input type='checkbox' name='Leak detectors operational?'></div>
-<div class='section'>17th Floor Pressure reducing valves</div>
-<div class='row'><label>DHW gauge psi IN psi #</label><input type='text' name='DHW gauge psi IN psi #'></div>
-<div class='row'><label>DHW gauge psi Out psi #</label><input type='text' name='DHW gauge psi Out psi #'></div>
-<div class='row'><label>DCW gauge psi IN psi #</label><input type='text' name='DCW gauge psi IN psi #'></div>
-<div class='row'><label>DCW gauge psi OUT psi #</label><input type='text' name='DCW gauge psi OUT psi #'></div>
-<div class='row'><label>Circulation pump On / Off</label><input type='text' name='Circulation pump On / Off'></div>
-<div class='row'><label>EMax heater operational?</label><input type='checkbox' name='EMax heater operational?'></div>
-<div class='row'><label>Leak detectors operational?</label><input type='checkbox' name='Leak detectors operational?'></div>
-<div class='section'>9th Floor Pressure reducing valves</div>
-<div class='row'><label>DHW gauge psi IN psi #</label><input type='text' name='DHW gauge psi IN psi #'></div>
-<div class='row'><label>DHW gauge psi Out psi #</label><input type='text' name='DHW gauge psi Out psi #'></div>
-<div class='row'><label>DCW gauge psi IN psi #</label><input type='text' name='DCW gauge psi IN psi #'></div>
-<div class='row'><label>DCW gauge psi OUT psi #</label><input type='text' name='DCW gauge psi OUT psi #'></div>
-<div class='row'><label>Circulation pump On / Off</label><input type='text' name='Circulation pump On / Off'></div>
-<div class='row'><label>EMax heater operational?</label><input type='checkbox' name='EMax heater operational?'></div>
-<div class='row'><label>Leak detectors operational?</label><input type='checkbox' name='Leak detectors operational?'></div>
-<div class='section'>12th floor fire Pump System</div>
-<div class='row'><label>XFER SW Normal</label><input type='checkbox' name='XFER SW Normal'></div>
-<div class='row'><label>Verify Jockey Pump is in Auto</label><input type='checkbox' name='Verify Jockey Pump is in Auto'></div>
-<div class='row'><label>Note System Pressure psi #</label><input type='text' name='Note System Pressure psi #'></div>
-<div class='section'>Fire Command Center</div>
-<div class='row'><label>System normal?</label><input type='checkbox' name='System normal?'></div>
-<div class='row'><label>Bypasses active?</label><input type='checkbox' name='Bypasses active?'></div>
-<div class='row'><label>Jeron System normal?</label><input type='checkbox' name='Jeron System normal?'></div>
-<div class='row'><label>Room free of clutter?</label><input type='checkbox' name='Room free of clutter?'></div>
-<div class='section'>P7 Sewage Ejector / Sump Pump</div>
-<div class='row'><label>SP-4A/4B in auto? X</label><input type='text' name='SP-4A/4B in auto? X'></div>
-<div class='row'><label>Status (not in alarm) X</label><input type='text' name='Status (not in alarm) X'></div>
-<button type='submit'>Submit</button></form></body></html>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #eef1f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    color: #1a1a1a;
+  }
+  .page-header {
+    background: #0b2545;
+    color: #ffffff;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .page-header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+  form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px 18px 8px 18px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  .section-header {
+    background: #0b2545;
+    color: #ffffff;
+    padding: 14px 18px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+  .top-title {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0b2545;
+    margin: 10px 0 20px 0;
+  }
+  .field-group {
+    margin-bottom: 18px;
+  }
+  label.field-label {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  input[type="time"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    border: 2px solid #c7cdd6;
+    border-radius: 10px;
+    background: #fafbfc;
+  }
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="date"]:focus,
+  input[type="time"]:focus {
+    outline: none;
+    border-color: #0b2545;
+  }
+  .checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fafbfc;
+    border: 2px solid #c7cdd6;
+    border-radius: 10px;
+    padding: 14px;
+  }
+  .checkbox-row input[type="checkbox"] {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    accent-color: #0b2545;
+  }
+  .checkbox-row span {
+    font-size: 1rem;
+    color: #444;
+  }
+  .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .radio-option {
+    flex: 1;
+    min-width: 90px;
+  }
+  .radio-option input[type="radio"] {
+    display: none;
+  }
+  .radio-option label {
+    display: block;
+    text-align: center;
+    padding: 14px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #c7cdd6;
+    border-radius: 10px;
+    background: #fafbfc;
+    cursor: pointer;
+    color: #1a1a1a;
+  }
+  .radio-option input[type="radio"]:checked + label {
+    background: #0b2545;
+    border-color: #0b2545;
+    color: #ffffff;
+  }
+  .day-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .day-group .radio-option {
+    flex: 1 1 auto;
+    min-width: 70px;
+  }
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: #0b2545;
+    border: none;
+    border-radius: 12px;
+    margin: 10px 0 30px 0;
+    cursor: pointer;
+  }
+  button[type="submit"]:active {
+    background: #08183a;
+  }
+  .hint {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: -4px;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>OSLU (T1) Building Rounds</h1>
+</div>
+
+<form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+
+  <div class="card">
+
+    <div class="field-group">
+      <label class="field-label">Day of Week</label>
+      <div class="radio-group day-group">
+        <div class="radio-option">
+          <input type="radio" id="day_mon" name="day_of_week" value="Mon">
+          <label for="day_mon">Mon</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="day_tue" name="day_of_week" value="Tue">
+          <label for="day_tue">Tue</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="day_wed" name="day_of_week" value="Wed">
+          <label for="day_wed">Wed</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="day_thu" name="day_of_week" value="Thu">
+          <label for="day_thu">Thu</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="day_fri" name="day_of_week" value="Fri">
+          <label for="day_fri">Fri</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="day_sat" name="day_of_week" value="Sat">
+          <label for="day_sat">Sat</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="day_sun" name="day_of_week" value="Sun">
+          <label for="day_sun">Sun</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="date">Date</label>
+      <input type="date" id="date" name="date">
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="time">Time</label>
+      <input type="time" id="time" name="time">
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="oa_temp">OA Temp</label>
+      <input type="text" id="oa_temp" name="oa_temp">
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="technician">Technician</label>
+      <input type="text" id="technician" name="technician">
+    </div>
+
+    <div class="field-group">
+      <label class="field-label">Tower</label>
+      <div class="radio-group">
+        <div class="radio-option">
+          <input type="radio" id="tower_1" name="tower" value="Tower 1">
+          <label for="tower_1">Tower 1</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="tower_2" name="tower" value="Tower 2">
+          <label for="tower_2">Tower 2</label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="top-title">Tower 1</div>
+  <div class="section-header">Elevator and Stairway Pressurization Fans (43rd floor)</div>
+  <div class="card">
+    <div class="field-group">
+      <label class="field-label">EPF in auto?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="epf_in_auto" name="epf_in_auto">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">SPF in auto?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="spf_in_auto" name="spf_in_auto">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+  </div>
+  <div class="section-header">Chute vents (Roof)</div>
+  <div class="card">
+    <div class="field-group">
+      <label class="field-label">Recycling vent clear?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="recycling_vent_clear" name="recycling_vent_clear">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">Trash vent clear?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="trash_vent_clear" name="trash_vent_clear">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">Chute room exhuast?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="chute_room_exhuast" name="chute_room_exhuast">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+  </div>
+  <div class="section-header">Elevator Room ACU (43rd floor)</div>
+  <div class="card">
+    <div class="field-group">
+      <label class="field-label">ACU-D status</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="acu_d_status" name="acu_d_status">
+        <span>Checked = On, Unchecked = Off</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="acu_d_temp">ACU-D temp.</label>
+      <input type="number" step="any" id="acu_d_temp" name="acu_d_temp">
+    </div>
+    <div class="field-group">
+      <label class="field-label">ACU-E status</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="acu_e_status" name="acu_e_status">
+        <span>Checked = On, Unchecked = Off</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="acu_e_temp">ACU-E temp.</label>
+      <input type="number" step="any" id="acu_e_temp" name="acu_e_temp">
+    </div>
+    <div class="field-group">
+      <label class="field-label">ACU-F status</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="acu_f_status" name="acu_f_status">
+        <span>Checked = On, Unchecked = Off</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="acu_f_temp">ACU-F temp.</label>
+      <input type="number" step="any" id="acu_f_temp" name="acu_f_temp">
+    </div>
+    <div class="field-group">
+      <label class="field-label">ACU-G status</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="acu_g_status" name="acu_g_status">
+        <span>Checked = On, Unchecked = Off</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="acu_g_temp">ACU-G temp.</label>
+      <input type="number" step="any" id="acu_g_temp" name="acu_g_temp">
+    </div>
+  </div>
+  <div class="section-header">Dry Sprinkler System (42nd floor)</div>
+  <div class="card">
+    <div class="field-group">
+      <label class="field-label" for="air_side_pressure">Air Side Pressure</label>
+      <input type="number" step="any" id="air_side_pressure" name="air_side_pressure">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="water_side_pressure">Water Side Pressure</label>
+      <input type="number" step="any" id="water_side_pressure" name="water_side_pressure">
+    </div>
+  </div>
+  <div class="section-header">Domestic Hot Water System (42nd floor)</div>
+  <div class="card">
+    <div class="field-group">
+      <label class="field-label" for="t1_dhw_rh_hx">T1 DHW RH HX</label>
+      <input type="number" step="any" id="t1_dhw_rh_hx" name="t1_dhw_rh_hx">
+    </div>
+    <div class="field-group">
+      <label class="field-label">Recirculating water pump</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="recirculating_water_pump" name="recirculating_water_pump">
+        <span>Checked = On, Unchecked = Off</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">Expansion tank 1A Bladder normal?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="expansion_tank_1a_bladder_normal" name="expansion_tank_1a_bladder_normal">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">Expansion tank 1B Bladder normal?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="expansion_tank_1b_bladder_normal" name="expansion_tank_1b_bladder_normal">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="expansion_tank_1a_psi">Expansion tank 1A PSI</label>
+      <input type="number" step="any" id="expansion_tank_1a_psi" name="expansion_tank_1a_psi">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="expansion_tank_1b_psi">Expansion tank 1B PSI</label>
+      <input type="number" step="any" id="expansion_tank_1b_psi" name="expansion_tank_1b_psi">
+    </div>
+  </div>
+  <div class="section-header">T1-Mech-AHU-1 (42nd floor)</div>
+  <div class="card">
+    <div class="field-group">
+      <label class="field-label">Status of Unit</label>
+      <div class="radio-group">
+        <div class="radio-option">
+          <input type="radio" id="status_of_unit_heat" name="status_of_unit" value="Heat">
+          <label for="status_of_unit_heat">Heat</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="status_of_unit_cool" name="status_of_unit" value="Cool">
+          <label for="status_of_unit_cool">Cool</label>
+        </div>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="fan_speed">Fan Speed</label>
+      <input type="number" step="any" id="fan_speed" name="fan_speed">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="supply_air_temp">Supply Air Temp</label>
+      <input type="number" step="any" id="supply_air_temp" name="supply_air_temp">
+    </div>
+    <div class="field-group">
+      <label class="field-label">Alarms present</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="alarms_present" name="alarms_present">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+  </div>
+  <div class="section-header">31st Floor Pressure reducing valves</div>
+  <div class="card">
+    <div class="field-group">
+      <label class="field-label" for="dhw_gauge_psi_in">DHW gauge psi IN</label>
+      <input type="number" step="any" id="dhw_gauge_psi_in" name="dhw_gauge_psi_in">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="dhw_gauge_psi_out">DHW gauge psi Out</label>
+      <input type="number" step="any" id="dhw_gauge_psi_out" name="dhw_gauge_psi_out">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="dcw_gauge_psi_in">DCW gauge psi IN</label>
+      <input type="number" step="any" id="dcw_gauge_psi_in" name="dcw_gauge_psi_in">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="dcw_gauge_psi_out">DCW gauge psi OUT</label>
+      <input type="number" step="any" id="dcw_gauge_psi_out" name="dcw_gauge_psi_out">
+    </div>
+    <div class="field-group">
+      <label class="field-label">Circulation pump</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="circulation_pump" name="circulation_pump">
+        <span>Checked = On, Unchecked = Off</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">EMax heater operational?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="emax_heater_operational" name="emax_heater_operational">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">Leak detectors operational?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="leak_detectors_operational" name="leak_detectors_operational">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+  </div>
+  <div class="section-header">25th Floor Pressure reducing valves</div>
+  <div class="card">
+    <div class="field-group">
+      <label class="field-label" for="dhw_gauge_psi_in_1">DHW gauge psi IN</label>
+      <input type="number" step="any" id="dhw_gauge_psi_in_1" name="dhw_gauge_psi_in_1">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="dhw_gauge_psi_out_1">DHW gauge psi Out</label>
+      <input type="number" step="any" id="dhw_gauge_psi_out_1" name="dhw_gauge_psi_out_1">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="dcw_gauge_psi_in_1">DCW gauge psi IN</label>
+      <input type="number" step="any" id="dcw_gauge_psi_in_1" name="dcw_gauge_psi_in_1">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="dcw_gauge_psi_out_1">DCW gauge psi OUT</label>
+      <input type="number" step="any" id="dcw_gauge_psi_out_1" name="dcw_gauge_psi_out_1">
+    </div>
+    <div class="field-group">
+      <label class="field-label">Circulation pump</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="circulation_pump_1" name="circulation_pump_1">
+        <span>Checked = On, Unchecked = Off</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">EMax heater operational?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="emax_heater_operational_1" name="emax_heater_operational_1">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">Leak detectors operational?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="leak_detectors_operational_1" name="leak_detectors_operational_1">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+  </div>
+  <div class="section-header">17th Floor Pressure reducing valves</div>
+  <div class="card">
+    <div class="field-group">
+      <label class="field-label" for="dhw_gauge_psi_in_2">DHW gauge psi IN</label>
+      <input type="number" step="any" id="dhw_gauge_psi_in_2" name="dhw_gauge_psi_in_2">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="dhw_gauge_psi_out_2">DHW gauge psi Out</label>
+      <input type="number" step="any" id="dhw_gauge_psi_out_2" name="dhw_gauge_psi_out_2">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="dcw_gauge_psi_in_2">DCW gauge psi IN</label>
+      <input type="number" step="any" id="dcw_gauge_psi_in_2" name="dcw_gauge_psi_in_2">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="dcw_gauge_psi_out_2">DCW gauge psi OUT</label>
+      <input type="number" step="any" id="dcw_gauge_psi_out_2" name="dcw_gauge_psi_out_2">
+    </div>
+    <div class="field-group">
+      <label class="field-label">Circulation pump</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="circulation_pump_2" name="circulation_pump_2">
+        <span>Checked = On, Unchecked = Off</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">EMax heater operational?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="emax_heater_operational_2" name="emax_heater_operational_2">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">Leak detectors operational?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="leak_detectors_operational_2" name="leak_detectors_operational_2">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+  </div>
+  <div class="section-header">9th Floor Pressure reducing valves</div>
+  <div class="card">
+    <div class="field-group">
+      <label class="field-label" for="dhw_gauge_psi_in_3">DHW gauge psi IN</label>
+      <input type="number" step="any" id="dhw_gauge_psi_in_3" name="dhw_gauge_psi_in_3">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="dhw_gauge_psi_out_3">DHW gauge psi Out</label>
+      <input type="number" step="any" id="dhw_gauge_psi_out_3" name="dhw_gauge_psi_out_3">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="dcw_gauge_psi_in_3">DCW gauge psi IN</label>
+      <input type="number" step="any" id="dcw_gauge_psi_in_3" name="dcw_gauge_psi_in_3">
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="dcw_gauge_psi_out_3">DCW gauge psi OUT</label>
+      <input type="number" step="any" id="dcw_gauge_psi_out_3" name="dcw_gauge_psi_out_3">
+    </div>
+    <div class="field-group">
+      <label class="field-label">Circulation pump</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="circulation_pump_3" name="circulation_pump_3">
+        <span>Checked = On, Unchecked = Off</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">EMax heater operational?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="emax_heater_operational_3" name="emax_heater_operational_3">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">Leak detectors operational?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="leak_detectors_operational_3" name="leak_detectors_operational_3">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+  </div>
+  <div class="section-header">12th floor fire Pump System</div>
+  <div class="card">
+    <div class="field-group">
+      <label class="field-label">XFER SW Normal</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="xfer_sw_normal" name="xfer_sw_normal">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">Verify Jockey Pump is in Auto</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="verify_jockey_pump_is_in_auto" name="verify_jockey_pump_is_in_auto">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="note_system_pressure">Note System Pressure</label>
+      <input type="number" step="any" id="note_system_pressure" name="note_system_pressure">
+    </div>
+  </div>
+  <div class="section-header">Fire Command Center</div>
+  <div class="card">
+    <div class="field-group">
+      <label class="field-label">System normal?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="system_normal" name="system_normal">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">Bypasses active?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="bypasses_active" name="bypasses_active">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">Jeron System normal?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="jeron_system_normal" name="jeron_system_normal">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">Room free of clutter?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="room_free_of_clutter" name="room_free_of_clutter">
+        <span>Checked = Yes, Unchecked = No</span>
+      </div>
+    </div>
+  </div>
+  <div class="section-header">P7 Sewage Ejector / Sump Pump</div>
+  <div class="card">
+    <div class="field-group">
+      <label class="field-label">SP-4A/4B in auto?</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="sp_4a_4b_in_auto" name="sp_4a_4b_in_auto">
+        <span></span>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">Status (not in alarm)</label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="status_not_in_alarm" name="status_not_in_alarm">
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit">Submit Building Rounds</button>
+</form>
+
+</body>
+</html>
